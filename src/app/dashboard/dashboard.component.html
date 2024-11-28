@@ -1,1 +1,16 @@
-<p>dashboard works!</p>
+<div class="main">
+    <div class="left">
+        <h4>&MENU</h4>
+        <hr>
+        <h3 routerLink="home">Home</h3>
+        <h3 routerLink="createemployee">Create Employee</h3>
+        <h3 routerLink="allemployee">All Employees</h3>
+        <button type="button" class="btn btn-primary" (click)="logout()">logout</button>
+
+    </div>
+
+    <div class="right">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
