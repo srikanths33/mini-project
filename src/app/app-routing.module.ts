@@ -5,10 +5,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { AllemployeesComponent } from './allemployees/allemployees.component';
 import { CreateemployeeComponent } from './createemployee/createemployee.component';
+import { AuthenticationGuard } from './authentication.guard';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
-  {path:'dashboard',component:DashboardComponent,children :[
+  {path:'dashboard',canActivate:[AuthenticationGuard],component:DashboardComponent,children :[
     {path:'home',component:HomeComponent},
     {path:'createemployee',component:CreateemployeeComponent},
     {path:'allemployee',component:AllemployeesComponent},
