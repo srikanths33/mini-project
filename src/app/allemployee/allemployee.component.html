@@ -1,0 +1,78 @@
+<input type="text" placeholder="search" [(ngModel)]="term" (keyup)="filter()">
+<select [(ngModel)]="column">
+    <option>id</option>
+    <option>name</option>
+    <option>company</option>
+    <option>role</option>
+    <option>package</option>
+    <option>email</option>
+    <option>dob</option>
+    <option>workMode</option>
+</select>
+<select [(ngModel)]="order">
+    <option>asc</option>
+    <option>desc</option>
+</select>
+<button (click)="sort()">sort</button>
+
+<select [(ngModel)]="limit">
+    <option>10</option>
+    <option>20</option>
+    <option>30</option>
+
+</select>
+<select [(ngModel)]="page">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+
+</select>
+
+<button (click)="Pagination()">Pagination</button>
+<div class="container">
+    <h1>Employee List</h1>
+    
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>Company</th>
+          <th>Role</th>
+          <th>Package</th>
+          <!-- <th>Email</th> -->
+          <th>DOB</th>
+          <th>Address</th>
+          <th>Hikes</th>
+          <th>Work Mode</th>
+          <th>ACtion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{employee.id}}</td>
+          <td>{{employee.name}}</td>
+          <td>{{employee.company}}</td>
+          <td>{{employee.role}}</td>
+          <td>{{employee.package}}</td>
+          <!-- <td>{{employee.email}}</td> -->
+          <td>{{employee.dob}}</td>
+          <td>
+            {{employee.address?.addressLine}}
+            {{employee.address?.city}}
+            {{employee.address?.state}}
+            {{employee.address?.pincode}}
+          </td>
+          <td>
+            {{employee.hikes?.year}} <br>
+            {{employee.hikes?.percentage}}%
+          </td>
+          <td>{{employee.workMode}}</td>
+          <td>
+            <button class="btn btn-danger" (click)="delete(employee.id)">delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
