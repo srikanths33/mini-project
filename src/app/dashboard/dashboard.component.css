@@ -1,0 +1,18 @@
+.main{
+    width: 100vw;
+    height:100vh;
+    margin: 0;
+    display: flex;
+}
+.left{
+    height: 100%;
+    width:20%;
+    background-color:black;
+    color: white;
+
+}
+.right{
+    width:80%;
+    background-color: aliceblue;
+    overflow: auto;
+}

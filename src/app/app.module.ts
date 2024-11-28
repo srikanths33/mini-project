@@ -9,7 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { CreateemployeeComponent } from './createemployee/createemployee.component';
-import { AllemployeesComponent } from './allemployees/allemployees.component';
+import { AllemployeeComponent } from './allemployee/allemployee.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +17,7 @@ import { AllemployeesComponent } from './allemployees/allemployees.component';
     DashboardComponent,
     HomeComponent,
     CreateemployeeComponent,
-    AllemployeesComponent
+    AllemployeeComponent,
   ],
   imports: [
     BrowserModule,
