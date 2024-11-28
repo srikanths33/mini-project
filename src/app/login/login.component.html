@@ -1,1 +1,13 @@
-<p>login works!</p>
+<div class="parent">
+    <div class="child">
+        <form [formGroup]="loginform">
+            <h5>account login</h5>
+            <label for="">Email:</label>
+            <input type="text" formControlName="email">
+            <label for="">Password:</label>
+            <input type="text" formControlName="password">
+            <button (click)="login()">login</button>
+
+        </form>
+    </div>
+</div>
