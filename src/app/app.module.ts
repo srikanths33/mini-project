@@ -10,6 +10,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { CreateemployeeComponent } from './createemployee/createemployee.component';
 import { AllemployeeComponent } from './allemployee/allemployee.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +19,7 @@ import { AllemployeeComponent } from './allemployee/allemployee.component';
     HomeComponent,
     CreateemployeeComponent,
     AllemployeeComponent,
+    PagenotfoundComponent,
   ],
   imports: [
     BrowserModule,
