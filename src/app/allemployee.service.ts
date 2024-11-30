@@ -29,5 +29,9 @@ deleteemployee(id:string):Observable<any>{
   return this._httpclient.delete("https://6572df5d192318b7db412dfe.mockapi.io/employees/"+id);
 }
 
+createemployee(data:any):Observable<any>{
+  return this._httpclient.post("https://6572df5d192318b7db412dfe.mockapi.io/employees",data);
+}
+
 }
 
