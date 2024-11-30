@@ -6,6 +6,7 @@ import { HomeComponent } from './home/home.component';
 import { CreateemployeeComponent } from './createemployee/createemployee.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { AllemployeeComponent } from './allemployee/allemployee.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
     {path:'allemployee',component:AllemployeeComponent},
 
   ]},
+  {path:'**',component:PagenotfoundComponent},
 
 
 
