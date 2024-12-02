@@ -16,11 +16,12 @@ const routes: Routes = [
     {path:'allemployee',component:AllemployeeComponent},
 
   ]},
+
+
+
+  {path:'',component:LoginComponent},
   {path:'**',component:PagenotfoundComponent},
 
-
-
-  {path:'',component:LoginComponent}
 ];
 
 @NgModule({
